@@ -1,0 +1,7 @@
+{
+  "applicationName": "emergency-response-api",
+  "runtime": "4.9.4:4e-java17",
+  "replicas": 1,
+  "replicaSize": "0.1",
+  "deploymentModel": "rolling"
+}
