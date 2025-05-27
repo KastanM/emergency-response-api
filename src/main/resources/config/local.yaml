@@ -1,3 +1,5 @@
+api:
+  id: "0"
 db:
   host: db-ems.secondssave.com
   port: "5432"

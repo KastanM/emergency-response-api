@@ -9,7 +9,10 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>4.5.0</mule.maven.plugin.version>
+		<app.runtime>4.9.4</app.runtime>
+		<connectedApp.clientId></connectedApp.clientId>
+		<connectedApp.clientSecret></connectedApp.clientSecret>
 	</properties>
 	<build>
 		<plugins>
@@ -30,6 +33,27 @@
 							<artifactId>postgresql</artifactId>
 						</sharedLibrary>
 					</sharedLibraries>
+					<cloudhub2Deployment>
+						<muleVersion>${app.runtime}</muleVersion>
+						<businessGroupId>5ed8c790-520e-431e-adfb-de9c1eb21498</businessGroupId>
+						<environment>Sandbox</environment>
+						<applicationName>emergency-response-api-2</applicationName>
+						<provider>MC</provider>
+						<target>Cloudhub-US-East-2</target>
+						<vCores>0.2</vCores>
+						<javaVersion>17</javaVersion>
+						<connectedAppClientId>${connectedApp.clientId}</connectedAppClientId>
+						<connectedAppClientSecret>${connectedApp.clientSecret}</connectedAppClientSecret>
+						<connectedAppGrantType>client_credentials</connectedAppGrantType>
+						<properties>
+							<anypoint.platform.client_id>${anypoint.platform.client_id</anypoint.platform.client_id>
+							<muel.env>dev</muel.env>
+						</properties>
+						<secureProperties>
+							<db.password>${db.password}</db.password>
+							<anypoint.platform.client_secret>${anypoint.plaform.client_secret}</anypoint.platform.client_secret>
+						</secureProperties>
+					</cloudhub2Deployment>
 					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
@@ -91,17 +115,17 @@
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<dependency>
-			<groupId>5ed8c790-520e-431e-adfb-de9c1eb21498</groupId>
-			<artifactId>emergency-response-system-api</artifactId>
-			<version>1.0.5</version>
-			<classifier>raml</classifier>
-			<type>zip</type>
-		</dependency>
-		<dependency>
 			<groupId>org.mule.modules</groupId>
 			<artifactId>mule-validation-module</artifactId>
 			<version>2.0.7</version>
 			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>5ed8c790-520e-431e-adfb-de9c1eb21498</groupId>
+			<artifactId>emergency-response-system-api</artifactId>
+			<version>1.2.0</version>
+			<classifier>raml</classifier>
+			<type>zip</type>
 		</dependency>
 	</dependencies>
 </project>

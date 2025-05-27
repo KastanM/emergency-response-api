@@ -1,0 +1,7 @@
+api:
+  id: "20348256"
+db:
+  host: db-ems.secondssave.com
+  port: "5432"
+  database: kastan_db
+  username: kastan
