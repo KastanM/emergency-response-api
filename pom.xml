@@ -11,8 +11,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<mule.maven.plugin.version>4.5.0</mule.maven.plugin.version>
 		<app.runtime>4.9.4</app.runtime>
-		<connectedApp.clientId></connectedApp.clientId>
-		<connectedApp.clientSecret></connectedApp.clientSecret>
+		<connectedApp.clientId/>
+		<connectedApp.clientSecret/>
 	</properties>
 	<build>
 		<plugins>
